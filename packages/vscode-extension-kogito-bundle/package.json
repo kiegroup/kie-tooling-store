@@ -26,7 +26,7 @@
   ],
   "activationEvents": [],
   "extensionDependencies": [
-    "kiegroup.vscode-extension-bpmn-editor",
-    "kiegroup.vscode-extension-dmn-editor"
+    "kie-group.vscode-extension-bpmn-editor",
+    "kie-group.vscode-extension-dmn-editor"
   ]
 }
