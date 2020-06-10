@@ -21,7 +21,7 @@
     "kie-bc-editors-unpacked": "0.5.0"
   },
   "displayName": "DMN Editor",
-  "publisher": "kiegroup",
+  "publisher": "redhat",
   "icon": "icon.png",
   "main": "./dist/extension/extension.js",
   "engines": {

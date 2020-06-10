@@ -15,7 +15,7 @@
     "watch": "yarn build-ext"
   },
   "displayName": "Kogito Bundle",
-  "publisher": "kiegroup",
+  "publisher": "kie-group",
   "icon": "icon.png",
   "main": "./dist/extension/extension.js",
   "engines": {
