@@ -1,13 +1,10 @@
-name: CI
+name: Create draft release
 
 on:
   push:
-    branches: [master]
-  pull_request:
-    branches: "**"
+    branches: ["**-prerelease"]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
 
