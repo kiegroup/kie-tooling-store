@@ -16,5 +16,5 @@ Features
 
 Release notes
 ---
-See the [release notes]("./CHANGELOG.md").
+See the [release notes](./CHANGELOG.md).
  

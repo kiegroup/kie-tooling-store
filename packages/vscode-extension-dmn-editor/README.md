@@ -23,5 +23,5 @@ DMN files must be inside a `src/` folder on your Workspace to be visible on the 
 
 Release notes
 ---
-See the [release notes]("./CHANGELOG.md").
+See the [release notes](./CHANGELOG.md).
  
