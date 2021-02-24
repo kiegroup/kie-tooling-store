@@ -19,58 +19,58 @@ const pfWebpackOptions = require("@kogito-tooling/patternfly-base/patternflyWebp
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
 
 const commonConfig = {
-    mode: "development",
-    devtool: "inline-source-map",
-    output: {
-        path: path.resolve(__dirname, "./dist"),
-        filename: "[name].js",
-        library: "PmmlEditor",
-        libraryTarget: "umd",
-        umdNamedDefine: true
-    },
-    externals: {
-        vscode: "commonjs vscode"
-    },
-    plugins: [],
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                loader: "ts-loader"
-            },
-            ...pfWebpackOptions.patternflyRules
-        ]
-    },
-    resolve: {
-        extensions: [".tsx", ".ts", ".js", ".jsx"],
-        modules: [path.resolve("../../node_modules"), path.resolve("./node_modules"), path.resolve("./src")]
-    }
+  mode: "development",
+  devtool: "inline-source-map",
+  output: {
+    path: path.resolve(__dirname, "./dist"),
+    filename: "[name].js",
+    library: "PmmlEditor",
+    libraryTarget: "umd",
+    umdNamedDefine: true
+  },
+  externals: {
+    vscode: "commonjs vscode"
+  },
+  plugins: [],
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: "ts-loader"
+      },
+      ...pfWebpackOptions.patternflyRules
+    ]
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
+    modules: [path.resolve("../../node_modules"), path.resolve("./node_modules"), path.resolve("./src")]
+  }
 };
 
-module.exports = async (argv) => [
-    {
-        ...commonConfig,
-        target: "node",
-        entry: {
-            "extension/extension": "./src/extension/extension.ts"
-        },
-        plugins: []
+module.exports = async argv => [
+  {
+    ...commonConfig,
+    target: "node",
+    entry: {
+      "extension/extension": "./src/extension/extension.ts"
     },
-    {
-        ...commonConfig,
-        target: "web",
-        entry: {
-            "webview/index": "./src/webview/index.ts"
+    plugins: []
+  },
+  {
+    ...commonConfig,
+    target: "web",
+    entry: {
+      "webview/index": "./src/webview/index.ts"
+    },
+    module: {
+      rules: [
+        {
+          test: /\.ttf$/,
+          use: ["file-loader"]
         },
-        module: {
-            rules: [
-                {
-                    test: /\.ttf$/,
-                    use: ["file-loader"]
-                },
-                ...pfWebpackOptions.patternflyRules
-            ]
-        },
-        plugins: [new MonacoWebpackPlugin()]
-    }
+        ...pfWebpackOptions.patternflyRules
+      ]
+    },
+    plugins: [new MonacoWebpackPlugin()]
+  }
 ];

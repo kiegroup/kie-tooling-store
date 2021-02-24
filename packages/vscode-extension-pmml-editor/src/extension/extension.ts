@@ -14,43 +14,43 @@
  * limitations under the License.
  */
 
-import {backendI18nDefaults, backendI18nDictionaries} from "@kogito-tooling/backend/dist/i18n";
-import {VsCodeBackendProxy} from "@kogito-tooling/backend/dist/vscode";
-import {I18n} from "@kogito-tooling/i18n/dist/core";
+import { backendI18nDefaults, backendI18nDictionaries } from "@kogito-tooling/backend/dist/i18n";
+import { VsCodeBackendProxy } from "@kogito-tooling/backend/dist/vscode";
+import { I18n } from "@kogito-tooling/i18n/dist/core";
 import * as KogitoVsCode from "@kogito-tooling/vscode-extension";
 import * as vscode from "vscode";
 
 let backendProxy: VsCodeBackendProxy;
 
 export function activate(context: vscode.ExtensionContext) {
-    console.info("Extension is alive.");
+  console.info("Extension is alive.");
 
-    const backendI18n = new I18n(backendI18nDefaults, backendI18nDictionaries, vscode.env.language);
-    backendProxy = new VsCodeBackendProxy(context, backendI18n);
+  const backendI18n = new I18n(backendI18nDefaults, backendI18nDictionaries, vscode.env.language);
+  backendProxy = new VsCodeBackendProxy(context, backendI18n);
 
-    KogitoVsCode.startExtension({
-        extensionName: "kie-group.vscode-extension-pmml-editor",
-        context: context,
-        viewType: "kieKogitoWebviewEditorsPmml",
-        getPreviewCommandId: "",
-        editorEnvelopeLocator: {
-            targetOrigin: "vscode",
-            mapping: new Map([
-                [
-                    "pmml",
-                    {
-                        envelopePath: "dist/webview/index.js",
-                        resourcesPathPrefix: "dist/webview/editors/pmml"
-                    }
-                ]
-            ])
-        },
-        backendProxy: backendProxy
-    });
+  KogitoVsCode.startExtension({
+    extensionName: "kie-group.vscode-extension-pmml-editor",
+    context: context,
+    viewType: "kieKogitoWebviewEditorsPmml",
+    getPreviewCommandId: "",
+    editorEnvelopeLocator: {
+      targetOrigin: "vscode",
+      mapping: new Map([
+        [
+          "pmml",
+          {
+            envelopePath: "dist/webview/index.js",
+            resourcesPathPrefix: "dist/webview/editors/pmml"
+          }
+        ]
+      ])
+    },
+    backendProxy: backendProxy
+  });
 
-    console.info("Extension is successfully setup.");
+  console.info("Extension is successfully setup.");
 }
 
 export function deactivate() {
-    backendProxy?.stopServices();
+  backendProxy?.stopServices();
 }

@@ -17,12 +17,12 @@
     "watch": "yarn build-ext"
   },
   "dependencies": {
-    "@kogito-tooling/editor": "0.8.3",
-    "@kogito-tooling/i18n": "0.8.3",
-    "@kogito-tooling/patternfly-base": "0.8.3",
-    "@kogito-tooling/vscode-extension": "0.8.3",
-    "@kogito-tooling/workspace": "0.8.3",
-    "@kogito-tooling/pmml-editor": "0.8.3"
+    "@kogito-tooling/editor": "0.8.4",
+    "@kogito-tooling/i18n": "0.8.4",
+    "@kogito-tooling/patternfly-base": "0.8.4",
+    "@kogito-tooling/vscode-extension": "0.8.4",
+    "@kogito-tooling/workspace": "0.8.4",
+    "@kogito-tooling/pmml-editor": "0.8.4"
   },
   "icon": "icon.png",
   "main": "./dist/extension/extension.js",
