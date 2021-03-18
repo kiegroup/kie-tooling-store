@@ -15,8 +15,10 @@
  */
 
 const path = require("path");
+
 const pfWebpackOptions = require("@kogito-tooling/patternfly-base/patternflyWebpackOptions");
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
+const { merge } = require("webpack-merge");
 
 const commonConfig = {
   mode: "development",
@@ -37,8 +39,7 @@ const commonConfig = {
       {
         test: /\.tsx?$/,
         loader: "ts-loader"
-      },
-      ...pfWebpackOptions.patternflyRules
+      }
     ]
   },
   resolve: {
@@ -48,16 +49,13 @@ const commonConfig = {
 };
 
 module.exports = async argv => [
-  {
-    ...commonConfig,
+  merge(commonConfig, {
     target: "node",
     entry: {
       "extension/extension": "./src/extension/extension.ts"
-    },
-    plugins: []
-  },
-  {
-    ...commonConfig,
+    }
+  }),
+  merge(commonConfig, {
     target: "web",
     entry: {
       "webview/index": "./src/webview/index.ts"
@@ -72,5 +70,5 @@ module.exports = async argv => [
       ]
     },
     plugins: [new MonacoWebpackPlugin()]
-  }
+  })
 ];
