@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { PMMLEditorFactory } from "@kogito-tooling/pmml-editor";
 import * as MicroEditorEnvelope from "@kogito-tooling/editor/dist/envelope";
 import { ChannelType, getOperatingSystem } from "@kogito-tooling/channel-common-api";
+import { PMMLEditorFactory } from "@kogito-tooling/pmml-editor";
 
 declare global {
   export const acquireVsCodeApi: any;
