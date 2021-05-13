@@ -42,7 +42,7 @@
         "displayName": "BPMN Editor",
         "selector": [
           {
-            "filenamePattern": "*.{bpmn,bpmn2}"
+            "filenamePattern": "*.{bpmn,bpmn2,bmpn20.xml}"
           }
         ]
       }
@@ -60,13 +60,13 @@
     "menus": {
       "commandPalette": [
         {
-          "when": "resourceLangId =~ /bpmn|bpmn2/",
+          "when": "resourceLangId =~ /bpmn|bpmn2|bmpn20.xml/",
           "command": "extension.kogito.getPreviewSvgBpmn"
         }
       ],
       "editor/title": [
         {
-          "when": "resourceLangId =~ /bpmn|bpmn2/",
+          "when": "resourceLangId =~ /bpmn|bpmn2|bmpn20.xml/",
           "command": "extension.kogito.getPreviewSvgBpmn",
           "group": "navigation"
         }
@@ -77,12 +77,14 @@
         "id": "bpmn",
         "extensions": [
           ".bpmn",
-          ".bpmn2"
+          ".bpmn2",
+          ".bmpn20.xml"
         ],
         "aliases": [
           "bpmn",
           "bpmn2",
-          "Business Process Model and Notation"
+          "Business Process Model and Notation",
+          "bmpn20.xml"
         ]
       }
     ]
