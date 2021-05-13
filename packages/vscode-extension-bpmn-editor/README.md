@@ -6,7 +6,7 @@ Create and edit BPMN and BPMN2 files.
 
 Features
 ---
-- Create and edit BPMN (`.bpmn`) and BPMN2 (`.bpmn2`) files.
+- Create and edit BPMN (`.bpmn`) and BPMN2 (`.bpmn2` or `.bpmn2.xml`) files.
 - Native keyboard shortcuts (Press `shift+/` to display available combinations).
 - Export diagram to SVG (use the SVG icon on the top-right corner).
 
