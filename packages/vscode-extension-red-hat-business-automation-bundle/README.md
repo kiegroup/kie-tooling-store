@@ -6,7 +6,7 @@ Create and edit BPMN, DMN and SceSim files.
 
 Features
 ---
-- Create and edit BPMN (`.bpmn`) and BPMN2 (`.bpmn2`) files.
+- Create and edit BPMN (`.bpmn`) and BPMN2 (`.bpmn2` or `.bpmn20.xml`) files.
 - Create and edit DMN 1.1 and DMN 1.2 (`.dmn`) files.
 - Create and edit SceSim (`.scesim`) files with the Test Scenario Editor.
 - Native keyboard shortcuts (Press `shift+/` to display available combinations).
