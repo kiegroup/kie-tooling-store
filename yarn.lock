@@ -1761,12 +1761,12 @@
     eol "^0.9.1"
     glob "^7.1.6"
 
-"@kogito-tooling/bpmn-editor-unpacked@^8.2.0":
+"@kogito-tooling/bpmn-editor-unpacked@^8.3.0":
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/@kogito-tooling/bpmn-editor-unpacked/-/bpmn-editor-unpacked-8.3.0.tgz#ba91bc525a423005142926f4b7541bb4cf1824f4"
   integrity sha512-AZvDPq/Fl7Ao8FQe+/4DsInb5tp+yRdtTp/soiKSt1Z1BvCuybxs0rXXmgBPKJae/XHN3rJ7oy7zEN3z02VUeA==
 
-"@kogito-tooling/dmn-editor-unpacked@^8.2.0":
+"@kogito-tooling/dmn-editor-unpacked@^8.3.0":
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/@kogito-tooling/dmn-editor-unpacked/-/dmn-editor-unpacked-8.3.0.tgz#9aab08c0c3381a4a2ffb188cf82ae34fa7809fd5"
   integrity sha512-AzXoCrAxg9DVVuqz8mSw7BX6A6w9r3WQ/A3Nha5F1WoB+4tQhKGuwBLn3Ckl54ZqYK/AOpJk9ENWGadKno7OTA==
@@ -1821,7 +1821,7 @@
     redux "^4.1.0"
     uuid "^8.3.2"
 
-"@kogito-tooling/scesim-editor-unpacked@^8.2.0":
+"@kogito-tooling/scesim-editor-unpacked@^8.3.0":
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/@kogito-tooling/scesim-editor-unpacked/-/scesim-editor-unpacked-8.3.0.tgz#ea7d0d166b0c24fa56fba51c9d0ce9fbc3adc3a1"
   integrity sha512-ACvTY6L3Hg2JMk0COMiimAth/Ionw7fgpJVD2tDI3tmXA1EmvfihiEL8Uci9ohv+tekrEmx+JG54Z0w8CPu9DA==

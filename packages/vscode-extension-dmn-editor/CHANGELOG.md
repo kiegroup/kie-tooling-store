@@ -5,7 +5,6 @@
 - [KOGITO-5091](https://issues.redhat.com/browse/KOGITO-5091) - VSCode DMN, BPMN editor - creating connection can't be cancelled easily
 - [KOGITO-5241](https://issues.redhat.com/browse/KOGITO-5241) - Stunner - Resize Icon remains displayed
 - [KOGITO-5571](https://issues.redhat.com/browse/KOGITO-5571) - [Test Scenario] No effects when assigning a not-expression Simple Type column to expression type (and viceversa)
-- [KOGITO-5576](https://issues.redhat.com/browse/KOGITO-5576) - BPMN Editor - Moving connector's bendpoints results on erros in the console
 - [KOGITO-5594](https://issues.redhat.com/browse/KOGITO-5594) - [Stunner] bend point modification causes diagram inaccessible
 - [KOGITO-5274](https://issues.redhat.com/browse/KOGITO-5274) - Stunner - Line splicing
 - [KOGITO-5382](https://issues.redhat.com/browse/KOGITO-5382) - Verify support for node/event metadata attribues feature
